@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card text-center " style="margin-top:70px">
+  <div class="container">
+      <form method="POST">
+        <fieldset>
+          <legend><br>Enter the Poll Question</legend>
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit" class="btn btn-primary" style="margin-bottom:20px">Submit</button>
+        </fieldset>
+      </form>
+  </div>
+</div>
+{% endblock %}

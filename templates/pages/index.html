@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card text-center " style="margin-top:50px">
+  <div class="card-body">
+    <h1>FANG Polling Application</h1>
+    <p><b>F</b>irdose ---- <b>A</b>sif ---- <b>N</b>aushab ---- <b>G</b>anesh</p>
+    <a class="btn btn-outline-danger" href="{% url 'polls:index' %}">
+        View Available Polls</a
+      >
+  </div>
+  {% endblock %}
+  <br>
+  {% block content1 %}
+  <div class="card-body">
+    <h1>Want to Create a poll?</h1>
+    <br>
+    <a class="btn btn-success" href="{% url 'polls:form' %}">
+        Create Poll</a
+      >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <a class="btn btn-success" href="{% url 'polls:forma' %}">
+      Create Choices</a
+    >
+  </div>
+  </div>
+{% endblock %}
