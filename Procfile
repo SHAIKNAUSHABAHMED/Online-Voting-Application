@@ -1,1 +1,1 @@
-web: gunicorn pollster.wsgi
+worker: gunicorn pollster.wsgi
