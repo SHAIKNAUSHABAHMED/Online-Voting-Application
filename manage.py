@@ -7,7 +7,7 @@ from django.core.management.commands.runserver import Command as runserver
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pollster.settings')
-    runserver.default_port = str(process.env.PORT)
+    runserver.default_port = os.environ.get("PORT", 5000)
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
